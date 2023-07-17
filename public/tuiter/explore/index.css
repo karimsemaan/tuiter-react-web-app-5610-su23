@@ -1,0 +1,279 @@
+body {
+    padding-top: 20px;
+    font: 14px Arial;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+}
+
+.wd-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wd-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f8fa;
+    /* Credit: Looked this up on the web for light gray*/
+    border-radius: 30px;
+    padding: 10px 20px;
+    flex-grow: 1;
+    margin-right: 20px;
+
+}
+
+.wd-search input {
+    border: none;
+    flex-grow: 1;
+    margin: 0 10px;
+    background-color: #f5f8fa;
+    /* Credit: Looked this up on the web for light gray*/
+    color: #657786;
+    /* Credit: Looked this up on the web for dark gray*/
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Twitter uses this font-family */
+}
+
+
+.wd-search .fa-solid.fa-magnifying-glass {
+    font-size: 15px;
+    color: #657786;
+}
+
+.wd-search-container .fa-solid.fa-gear {
+    font-size: 15px;
+
+}
+
+.wd-tab ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-around;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-tab-item span {
+    display: block;
+    padding: 10px 0;
+}
+
+.wd-tab-item div {
+    position: relative;
+    display: inline-block;
+}
+
+.wd-tab-item div span {
+    display: inline-block;
+}
+
+.wd-tab-item {
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+}
+
+.wd-tab-active span {
+    font-weight: bold;
+    color: black;
+}
+
+.wd-tab-active span::after {
+    background-color: rgb(29, 155, 240);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform-origin: left;
+}
+
+.wd-tab a {
+    color: gray;
+    text-decoration: none;
+}
+
+
+.wd-image-tuit-wrapper {
+    position: relative;
+}
+
+.wd-image-tuit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.wd-image-tuit-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2em;
+    color: white;
+    font-weight: bolder;
+}
+
+.wd-image-rounded-border {
+    border-radius: 15px;
+}
+
+
+
+.wd-tuits {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.wd-tuit-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wd-tuit-topic {
+    padding: 10px 0;
+}
+
+.wd-tuit-text {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: gray;
+}
+
+
+.wd-tuit-name {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.wd-tuit-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+
+.fa-solid.fa-ellipsis {
+    font-size: smaller;
+    color: gray;
+    align-self: flex-end;
+}
+
+
+/* Starting work for the index.html */
+
+.wd-tuit-navigation {
+    color: black;
+}
+
+.wd-tuit-navigation > li {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.wd-tuit-navigation > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+.wd-icon-text {
+    margin-left: 5px;
+}
+
+.wd-tuit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.wd-tuit-button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.wd-tuit-navigation .fa-solid.fa-ellipsis {
+    color: black;
+}
+
+.wd-form-control {
+    padding-left: 30px;
+}
+
+.wd-form-control::placeholder {
+    padding-left: 30px;
+}
+
+.wd-search-icon {
+    left: 20px;
+    top: 12px;
+}
+
+.wd-search-settings {
+    position: relative;
+    margin-left: 15px;
+    top: 5px;
+    padding-left: 10px;
+}
+
+.wd-settings-icon {
+    color: rgb(29, 155, 240);
+    font-size: 24px;
+}
+
+.wd-fix-image-tuit-overlay {
+    bottom: -15px;
+    left: 5px;
+}
+
+.img-fluid {
+    max-width: 60%;
+    height: auto;
+}
+
+.wd-tuit-description {
+    font-family: Arial, sans-serif;
+    font-size: 16.5px;
+    font-weight: bold;
+    color: black;
+}
+
+.wd-badge {
+    width: 13px;
+    height: 13px;
+}
+
+.wd-profile-img {
+    width: 48px;
+    height: 48px;
+    margin-right: 6px;
+}
+
+/* In order to make this work with the responsive grid to be more specific the large one I had to make it's position absolute for all the follow buttons */
+
+.wd-follow-position {
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+
