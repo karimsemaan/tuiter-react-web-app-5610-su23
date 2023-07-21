@@ -1,17 +1,11 @@
-import Classes from "./classes";
-import Styles from "./styles";
 import JavaScript from "./java-script";
-import ConditionalOutput from "./conditional-output";
-import TodoList from "./todo/todo-List";
+import DynamicStyling from "./dynamic-styling";
 
 function Assignment3() {
  return (
    <div>
      <h1>Assignment 3</h1>
-     <TodoList/>
-     <ConditionalOutput/>
-     <Styles/>
-     <Classes/>
+     <DynamicStyling />
      <JavaScript/>
    </div>
  );
