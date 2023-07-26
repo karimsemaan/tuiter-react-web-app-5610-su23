@@ -20,10 +20,12 @@ const TuitItem = ({
     return (
         <div className="row">
             <div className="col-10">
-            <BiX
-        className="float-end"
-        onClick={() => deleteTuitHandler(tuit._id)}
-      />
+                <BiX
+                    className="float-end"
+                    onClick={() => deleteTuitHandler(tuit._id)}
+                />
+                {/* This was not working on my end so I decided to import the class directly and it worked. <i className="bi bi-x-lg float-end"
+            onClick={() => deleteTuitHandler(tuit._id)}></i> */}
                 <div>
                     <span className="fw-bold">{tuit.userName}</span>
                     <img src="https://cdn.cdnlogo.com/logos/t/77/twitter-verified-badge.svg" style={{ width: '13px', height: '13px', marginLeft: '5px' }} alt="" />

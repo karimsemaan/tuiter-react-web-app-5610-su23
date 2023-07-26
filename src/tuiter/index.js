@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router";
 import Nav from "../nav";
 import NavigationSidebar from "./navigation-sidebar";
-import HomeScreen from "./navigation-sidebar/home-screen";
+import HomeScreen from "./home-screen";
 import ExploreScreen from "./explore-screen";
-import BookmarksScreen from "./navigation-sidebar/bookmarks-screen";
-import ProfileScreen from "./navigation-sidebar/profile-screen";
+import BookmarksScreen from "./bookmarks-screen";
+import ProfileScreen from "./profile-screen";
 import WhoToFollowList from "./who-to-follow-List";
 import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from "./reducers/tuits-reducer";
