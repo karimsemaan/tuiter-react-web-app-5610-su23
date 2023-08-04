@@ -40,7 +40,7 @@ const TuitStats = ({
                 onClick={() =>
                     dispatch(updateTuitThunk({ ...tuit, likes: tuit.dislikes + 1, disliked: true }))
                 }/>
-                {tuit.dislikes}
+                {tuit.dislikes || 0}
                 </div>
             <div className="col">
                 <BsUpload className="mx-2" />
