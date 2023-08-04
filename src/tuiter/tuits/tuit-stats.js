@@ -18,29 +18,29 @@ const TuitStats = ({
         <div className="row mt-2">
             <div className="col">
                 <FaRegComment className="mx-2" />
-                {tuit.replies}
+                {tuit.replies || 0}
             </div>
             <div className="col">
                 <FaRetweet className="mx-2" />
-                {tuit.retuits}
+                {tuit.retuits || 0}
             </div>
             <div className="col">
                 <FaHeart
-                    className="text-danger"
+                    className="mx-2"
                     fill={tuit.liked ? "#E0245E" : ""}
                     onClick={() =>
                         dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1, liked: true}))
                     }
                 />
-                <span className="ms-2">{tuit.likes}</span>
+                {tuit.likes || 0}
             </div>
             <div className="col">
-                <FaThumbsDown className="text-danger"
+                <FaThumbsDown className="mx-2"
                 fill={tuit.disliked ? "#E0245E" : ""}
                 onClick={() =>
                     dispatch(updateTuitThunk({ ...tuit, likes: tuit.dislikes + 1, disliked: true }))
                 }/>
-                <span className="ms-2">{tuit.dislikes}</span>
+                {tuit.dislikes || 0}
                 </div>
             <div className="col">
                 <BsUpload className="mx-2" />
