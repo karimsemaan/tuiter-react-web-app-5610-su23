@@ -6,11 +6,11 @@ import { useDispatch } from "react-redux";
 const TuitStats = ({
     tuit = {
         liked: true,
-        disliked: false,
         replies: 639,
         retuits: 1002,
         likes: 3964,
-        dislikes: 0,
+        dislikes: 123,
+        disliked: false,
     },
 }) => {
     const dispatch = useDispatch();
