@@ -38,9 +38,9 @@ const TuitStats = ({
                 <FaThumbsDown className="mx-2"
                 fill={tuit.disliked ? "#E0245E" : ""}
                 onClick={() =>
-                    dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes + 1, disliked: true }))
+                    dispatch(updateTuitThunk({ ...tuit, dislikes: (tuit.dislikes || 0) + 1, disliked: true }))
                 }/>
-                {tuit.dislikes || 0}
+                {tuit.dislikes || 0 }
                 </div>
             <div className="col">
                 <BsUpload className="mx-2" />
