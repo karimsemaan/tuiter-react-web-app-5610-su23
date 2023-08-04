@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 const TuitStats = ({
     tuit = {
         liked: true,
+        disliked: false,
         replies: 639,
         retuits: 1002,
         likes: 3964,
@@ -26,16 +27,18 @@ const TuitStats = ({
             <div className="col">
                 <FaHeart
                     className="text-danger"
+                    fill={tuit.liked ? "#E0245E" : ""}
                     onClick={() =>
-                        dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 }))
+                        dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1, liked: true}))
                     }
                 />
                 <span className="ms-2">{tuit.likes}</span>
             </div>
             <div className="col">
                 <FaThumbsDown className="text-danger"
+                fill={tuit.disliked ? "#E0245E" : ""}
                 onClick={() =>
-                    dispatch(updateTuitThunk({ ...tuit, likes: tuit.dislikes + 1 }))
+                    dispatch(updateTuitThunk({ ...tuit, likes: tuit.dislikes + 1, disliked: true }))
                 }/>
                 <span className="ms-2">{tuit.dislikes}</span>
                 </div>
