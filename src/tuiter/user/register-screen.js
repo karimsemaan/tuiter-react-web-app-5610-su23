@@ -1,23 +1,31 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { loginThunk } from "../services/auth-thunks";
-function LoginScreen() {
+import { registrationThunk } from "../services/auth-thunks"; 
+
+function RegisterScreen() {
  const [username, setUsername] = useState("");
  const [password, setPassword] = useState("");
+ const [confirmPassword, setConfirmPassword] = useState(""); 
  const navigate = useNavigate();
  const dispatch = useDispatch();
- const handleLogin = async () => {
+
+ const handleRegister = async () => {
+  if (password !== confirmPassword) { 
+    alert("Passwords do not match!");
+    return;
+  }
   try {
-    await dispatch(loginThunk({ username, password }));
-    navigate("/profile");
+    await dispatch(registrationThunk({ username, password })); 
+    navigate("/profile"); 
   } catch (e) {
     alert(e);
   }
  };
+
  return ( 
     <div>
-    <h1>Login Screen</h1>
+    <h1>Register Screen</h1>
     <div className="mt-2">
      <label>Username</label>
      <input className="form-control" type="text" value={username}
@@ -28,11 +36,16 @@ function LoginScreen() {
       <input className="form-control" type="password" value={password}
         onChange={(event) => setPassword(event.target.value)}/>
     </div>
+    <div className="mt-2">
+      <label>Confirm Password</label>
+      <input className="form-control" type="password" value={confirmPassword}
+        onChange={(event) => setConfirmPassword(event.target.value)}/>
+    </div>
     <button className="btn btn-primary mt-2"
-            onClick={handleLogin}>
-      Login
+            onClick={handleRegister}>
+      Register
     </button>
    </div>
  );
 }
-export default LoginScreen;
+export default RegisterScreen;

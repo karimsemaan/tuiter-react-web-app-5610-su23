@@ -1,9 +1,7 @@
-import { FaRegComment, FaRetweet, FaHeart } from "react-icons/fa";
+import { FaRegComment, FaRetweet, FaHeart, FaThumbsDown } from "react-icons/fa";
 import { BsUpload } from "react-icons/bs";
 import { updateTuitThunk } from "../services/tuits-thunks";
 import { useDispatch } from "react-redux";
-import { SIDislike } from "react-icons/si";
-
 
 const TuitStats = ({
     tuit = {
@@ -35,7 +33,7 @@ const TuitStats = ({
                 <span className="ms-2">{tuit.likes}</span>
             </div>
             <div className="col">
-                <SIDislike className="text-danger"
+                <FaThumbsDown className="text-danger"
                 onClick={() =>
                     dispatch(updateTuitThunk({ ...tuit, likes: tuit.dislikes + 1 }))
                 }/>
