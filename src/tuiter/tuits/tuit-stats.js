@@ -18,11 +18,11 @@ const TuitStats = ({
         <div className="row mt-2">
             <div className="col">
                 <FaRegComment className="mx-2" />
-                {tuit.replies || 0}
+                {tuit.replies}
             </div>
             <div className="col">
                 <FaRetweet className="mx-2" />
-                {tuit.retuits || 0}
+                {tuit.retuits}
             </div>
             <div className="col">
                 <FaHeart
@@ -32,7 +32,7 @@ const TuitStats = ({
                         dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1, liked: true}))
                     }
                 />
-                {tuit.likes || 0}
+                {tuit.likes}
             </div>
             <div className="col">
                 <FaThumbsDown className="mx-2"
@@ -40,7 +40,7 @@ const TuitStats = ({
                 onClick={() =>
                     dispatch(updateTuitThunk({ ...tuit, likes: tuit.dislikes + 1, disliked: true }))
                 }/>
-                {tuit.dislikes || 0}
+                {tuit.dislikes}
                 </div>
             <div className="col">
                 <BsUpload className="mx-2" />
