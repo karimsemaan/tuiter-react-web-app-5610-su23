@@ -14,8 +14,14 @@ const WhatsHappening = () => {
  const dispatch = useDispatch();
  const tuitClickHandler = () => {
     const newTuit = {
-        tuit: whatsHappening
-      }
+        topic: "Space",
+        username: "SpaceX",
+        time: "2h",
+        tuit: whatsHappening,
+        image: "tesla-square.jpeg",
+        handle: "@elonmusk",
+        text: "This is a test tuit"
+      };
       dispatch(createTuitThunk(newTuit));
       setWhatsHappening("");
  }
