@@ -1,0 +1,197 @@
+/* In order to make this as close as possible to the wireframe I had to set the zoom browser to 200% */
+#my{
+    zoom: 200%;
+}
+
+.wd-container {
+    padding: 12px;
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+
+.wd-header {
+    display: flex;
+    align-items: center;
+}
+
+.wd-header .fa-arrow-left {
+    margin-right: 10px;
+}
+
+.wd-header .fa-ellipsis {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.wd-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 30px;
+}
+
+.wd-tuit {
+    display: flex;
+    margin-top: 20px;
+    padding: 16px;
+    width: 100%;
+}
+
+.wd-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.wd-tuit-content {
+    width: 100%;
+    
+}
+
+.wd-tuit-author-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wd-author-badge-date {
+    display: flex;
+    align-items: center;
+}
+
+.wd-tuit-author {
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flag {
+    margin-left: 4px;
+    font-size: 13px;
+}
+
+.wd-badge {
+    width: 13px;
+    height: 13px;
+    margin-left: 4px;
+}
+
+.wd-tuit-handle-date {
+    color: gray;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.ellipsis {
+    color: gray;
+    font-size: 12px;
+}
+
+.wd-tuit-text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.wd-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.wd-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+.wd-card-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    padding: 0;
+}
+
+.wd-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    width: 100%;
+}
+
+.wd-card-body p {
+    margin: 0;
+    padding: 0; 
+    line-height: 1.2; 
+}
+
+.wd-card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.wd-card-text {
+    color: gray;
+    font-size: 1em;
+   
+}
+
+.wd-card-text-black {
+    color: black;
+}
+
+.wd-tuit-separator {
+    border: none;
+    border-top: 1px solid lightgray;
+    margin: 10px 0;
+}
+
+/* Use of important here because when I added the <a> tag with the link of the tweet the <p> and <h2> were always underlined in blue for some reason */
+.wd-card {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.wd-card:visited,
+.wd-card:hover,
+.wd-card:active {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+
+.wd-social-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 14px;
+    color: #657786;
+    margin-top: 20px;
+}
+
+
+.social-count {
+    margin-left: 10px; 
+}
+
+.myImage {
+    height: 150px; 
+    object-fit: cover;
+}
