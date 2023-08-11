@@ -13,6 +13,9 @@ import LoginScreen from "./user/login-screen";
 import RegisterScreen from "./user/register-screen";
 import ProfileScreen from "./profile-screen";
 import authReducer from "./services/auth-reducer";
+import AuthContext from "./user/auth-context";
+import ProtectedRoute from "./user/protected-route";
+
 const store = configureStore(
    {
       reducer: {
@@ -26,6 +29,7 @@ const store = configureStore(
 function Tuiter() {
    return (
       <Provider store={store}>
+         <AuthContext>
          <div>
             <Nav />
             <div className="row">
@@ -34,12 +38,12 @@ function Tuiter() {
                </div>
                <div className="col-7">
                   <Routes>
-                     <Route path="/home" element={<HomeScreen />} />
-                     <Route path="/explore" element={<ExploreScreen />} />
-                     <Route path="/bookmarks" element={<BookmarksScreen />} />
-                     <Route path="/login" element={<LoginScreen />} />
-                     <Route path="/register" element={<RegisterScreen />} />
-                     <Route path="/profile" element={<ProfileScreen />} />
+                     <Route path="/home" element={<ProtectedRoute> <HomeScreen /> </ProtectedRoute>} />
+                     <Route path="/explore" element={<ProtectedRoute> <ExploreScreen /> </ProtectedRoute>} />
+                     <Route path="/bookmarks" element={<ProtectedRoute> <BookmarksScreen /> </ProtectedRoute>} />
+                     <Route path="/login" element={<LoginScreen /> } />
+                     <Route path="/register" element={<RegisterScreen /> } />
+                     <Route path="/profile" element={<ProtectedRoute> <ProfileScreen /> </ProtectedRoute>} />
                   </Routes>
                </div>
                <div className="col-3">
@@ -47,6 +51,7 @@ function Tuiter() {
                </div>
             </div>
          </div>
+         </AuthContext>
       </Provider>
    );
 }

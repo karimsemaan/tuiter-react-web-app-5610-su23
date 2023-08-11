@@ -2,6 +2,7 @@ import Nav from "../nav";
 import Assignment3 from "./a3";
 import Assignment4 from "./a4";
 import Assignment5 from "./a5";
+import Assignment6 from "./a6";
 import {Routes, Route} from "react-router";
 
 function Labs() {
@@ -15,6 +16,8 @@ function Labs() {
         element={<Assignment4/>}/>
              <Route path="a5"
         element={<Assignment5/>}/>
+         <Route path="a6"
+        element={<Assignment6/>}/>
      </Routes>   
    </div>
  );
