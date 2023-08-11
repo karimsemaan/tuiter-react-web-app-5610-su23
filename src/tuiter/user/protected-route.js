@@ -9,9 +9,9 @@ function ProtectedRoute({ children }) {
   const navigate = useNavigate();
   useEffect(() => {
     const load = async () => {
-      const { payload } = await dispatch(profileThunk());
+      const { payload } = dispatch(profileThunk());
       if (!payload) {
-        navigate("/login");
+        navigate("/tuiter/login");
       }
       setLoading(false);
     };
