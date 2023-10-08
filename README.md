@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To access the server side please go to (https://github.com/karimsemaan/tuiter-node-server-app)
 
 ## Available Scripts
 
